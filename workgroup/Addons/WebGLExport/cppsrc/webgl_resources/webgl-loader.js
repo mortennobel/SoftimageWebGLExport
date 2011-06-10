@@ -13,6 +13,10 @@ function webGLStart(webGlCanvas, statusId, sceneName){
     if (!sceneName){
         sceneName = "scene.json";
     }
+    if (document.URL.indexOf('file:')==0){
+        alert("Error: Must be loaded from a webserver. The file: protocol does not support Ajax-request.");
+        return;
+    }
     var renderer = new WebGLRenderer();
     renderer.initGL(canvas);
     statusElement = document.getElementById(statusId);
