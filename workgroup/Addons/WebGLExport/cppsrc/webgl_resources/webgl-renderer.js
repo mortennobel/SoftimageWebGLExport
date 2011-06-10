@@ -45,27 +45,6 @@ function WebGLRenderer(){
         }
     }
 
-    this.initCamera = function(cameraData, sceneObject){
-        var c = new WebGLCamera(gl,cameraData, sceneObject);
-        if (cameras.length==0){
-            camera = c;
-        }
-        cameras.push(c);
-    }
-
-    this.getNumberOfCameras = function(){
-        return cameras.length;
-    }
-
-    this.setActiveCamera = function(index){
-        camera = cameras[index];
-        activeCameraIndex = index;
-    }
-
-    this.getActiveCameraIndex = function(){
-        return activeCameraIndex;
-    }
-
     this.sceneDraw = function () {
         gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -119,6 +98,28 @@ function WebGLRenderer(){
         shader.setMatrixUniforms(projectionMatrix,modelViewMatrixTmp);
 
         gl.drawElements(gl.TRIANGLES, sceneObject.meshVertexIndexBuffer.numItems, gl.UNSIGNED_SHORT, 0);
+    }
+
+    this.initCamera = function(cameraData, sceneObject){
+        var c = new WebGLCamera(gl,cameraData, sceneObject);
+        var isFirstCamera = cameras.length==0;
+        cameras.push(c);
+        if (isFirstCamera){
+            this.setActiveCamera(0);
+        }
+    }
+
+    this.getNumberOfCameras = function(){
+        return cameras.length;
+    }
+
+    this.setActiveCamera = function(index){
+        camera = cameras[index];
+        activeCameraIndex = index;
+    }
+
+    this.getActiveCameraIndex = function(){
+        return activeCameraIndex;
     }
 
     this.handleLoadedMesh = function (meshData, sceneObject){
@@ -193,6 +194,10 @@ function WebGLRenderer(){
 
     this.getCamera = function(){
         return camera;
+    }
+
+    this.setClearColor = function(clearColor){
+        gl.clearColor(clearColor[0], clearColor[1], clearColor[2], clearColor.length>3?clearColor[3]:1.0);
     }
 }
 

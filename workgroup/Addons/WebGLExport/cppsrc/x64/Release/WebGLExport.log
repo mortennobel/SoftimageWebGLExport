@@ -1,4 +1,4 @@
-﻿Build started 10-06-2011 13:29:34.
+﻿Build started 10-06-2011 21:06:16.
      1>Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "x64\Release\WebGLExporter.unsuccessfulbuild".
@@ -44,4 +44,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.01
+Time Elapsed 00:00:02.47

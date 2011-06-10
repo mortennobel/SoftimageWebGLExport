@@ -95,6 +95,9 @@ XSI::CStatus WebGLExportProp_Define( XSI::CRef& in_ctxt )
 	pset.AddParameter(	L"BackgroundColorB",XSI::CValue::siDouble,  XSI::siPersistable, 
 						L"", L"",	
 						0.0, 0.0, 1.0, 0.0, 1.0, param ) ;
+	pset.AddParameter(	L"BackgroundColorA",XSI::CValue::siDouble,  XSI::siPersistable, 
+						L"", L"",	
+						1.0, 0.0, 1.0, 0.0, 1.0, param ) ;
 
 	
 	
@@ -138,7 +141,7 @@ XSI::CStatus WebGLExportProp_DefineLayout( XSI::CRef& in_ctxt )
 	item.PutLabelMinPixels( labelMinPixels );
  	item.PutLabelPercentage( labelPercentage );
 
-	item = ppg.AddColor( L"BackgroundColorR", L"BackgroundColor", false ) ;
+	item = ppg.AddColor( L"BackgroundColorR", L"BackgroundColor", true ) ;
 	item.PutLabel(L"Background color");	
 	item.PutLabelMinPixels( labelMinPixels );
  	item.PutLabelPercentage( labelPercentage );
@@ -181,7 +184,7 @@ XSI::CStatus WebGLExportProp_PPGEvent( const XSI::CRef& in_ctxt )
 		{
 			XSI::CustomProperty in_pset = ctxt.GetSource();
 			
-			XSI::CValueArray args(5);
+			XSI::CValueArray args(6);
 			/*args[0] = in_pset.GetParameterValue( L"ConstMode" );
 			args[1] = in_pset.GetParameterValue( L"Subd_type" );
 			args[2] = in_pset.GetParameterValue( L"Subd_level" );*/
@@ -190,6 +193,7 @@ XSI::CStatus WebGLExportProp_PPGEvent( const XSI::CRef& in_ctxt )
 			args[2] = in_pset.GetParameterValue( L"BackgroundColorR" );
 			args[3] = in_pset.GetParameterValue( L"BackgroundColorG" );
 			args[4] = in_pset.GetParameterValue( L"BackgroundColorB" );
+			args[5] = in_pset.GetParameterValue( L"BackgroundColorA" );
 			
 			XSI::CValue retVal;
 			XSI::Application app;

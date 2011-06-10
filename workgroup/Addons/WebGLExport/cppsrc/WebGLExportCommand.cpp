@@ -135,7 +135,7 @@ void WebGLExportCommand::exportSceneProperties(JSONFileWriter &mfw){
 	mfw.EOL(true);
 	mfw.WriteParamHead( L"backgroundColor");
 	mfw.Write("[");
-	for (int i=0;i<3;i++){
+	for (int i=0;i<4;i++){
 		if (i>0){
 			mfw.Write(L",");
 		}

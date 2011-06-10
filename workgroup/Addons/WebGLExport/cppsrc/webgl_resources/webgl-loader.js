@@ -169,6 +169,11 @@ function webGLStart(webGlCanvas, statusId, sceneName){
             loadShader(shader,renderer);
         });
 
+        var backgroundColor = sceneData.backgroundColor;
+        if (backgroundColor){
+            renderer.setClearColor(backgroundColor);
+        }
+
         var materials = loadMaterials(renderer, sceneData.materials,textures);
 
         loadSceneObject(renderer,sceneData.sceneObjects,materials);

@@ -77,6 +77,7 @@ XSIPLUGINCALLBACK XSI::CStatus WebGLExportScene_Init( XSI::CRef& in_ctxt )
 	oArgs.Add(L"BackgroundColorR",(double)0.0);
 	oArgs.Add(L"BackgroundColorG",(double)0.0);
 	oArgs.Add(L"BackgroundColorB",(double)0.0);
+	oArgs.Add(L"BackgroundColorA",(double)1.0);
 
 	return XSI::CStatus::OK;
 }
@@ -102,7 +103,7 @@ XSIPLUGINCALLBACK XSI::CStatus WebGLExportScene_Execute( XSI::CRef& in_ctxt )
 	app.LogMessage("Starting WebGL export");
 	long subdLevel = 0;
 
-	double backgroundColorRGB[3];
+	double backgroundColorRGB[4];
 
 	long canvasWidth = args[0];
 	long canvasHeight = args[1];
@@ -110,6 +111,7 @@ XSIPLUGINCALLBACK XSI::CStatus WebGLExportScene_Execute( XSI::CRef& in_ctxt )
 	backgroundColorRGB[0] = args[2];
 	backgroundColorRGB[1] = args[3];
 	backgroundColorRGB[2] = args[4];
+	backgroundColorRGB[3] = args[5];
 
 	WebGLExportCommand exportCommand(constMode,subdType,subdLevel,canvasWidth,canvasHeight,backgroundColorRGB);
 	exportCommand.runExport();
