@@ -1,4 +1,9 @@
+// Modified by Morten Nobel-Joergensen
+
+// Based on 
 // http://pcsx2.googlecode.com/svn/trunk/tools/bin2cpp/bin2cpp.cpp
+
+// Original header:
 // BIN2CPP - Some hack-up Job of some mess I found online.
 //
 // Original was uncredited public domain.  This is uncredited public domain.

@@ -107,6 +107,28 @@ function WebGLInput(webglRenderer){
         }
     }
 
-    canvas.addEventListener('mousedown',mouseDown,0);
-    canvas.addEventListener('mouseup',mouseUp,0);
+    var cycleCamera = function(){
+        var camIndex = webglRenderer.getActiveCameraIndex();
+        camIndex++;
+        if (camIndex>=webglRenderer.getNumberOfCameras()){
+            camIndex = 0;
+        }
+        webglRenderer.setActiveCamera(camIndex);
+        webglRenderer.sceneDraw();
+    }
+
+    var keyPress = function(e){
+        var code;
+        if (!e) e = window.event;
+        if (e.keyCode) code = e.keyCode;
+        else if (e.which) code = e.which;
+        var character = String.fromCharCode(code);
+        if (character == 'c'){
+            cycleCamera();
+        }
+    }
+
+    canvas.addEventListener('mousedown',mouseDown,false);
+    canvas.addEventListener('mouseup',mouseUp,false);
+    document.addEventListener('keypress',keyPress,false);
 }

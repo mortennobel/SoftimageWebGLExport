@@ -14,6 +14,8 @@ function WebGLRenderer(){
     var textures = new Array();
     var lights = new Array();
     var camera;
+    var cameras = new Array();
+    var activeCameraIndex = 0;
     var modelViewMatrix = mat4.create();
     var modelViewMatrixTmp = mat4.create(); // updated for each object
     var projectionMatrix = mat4.create();
@@ -44,7 +46,24 @@ function WebGLRenderer(){
     }
 
     this.initCamera = function(cameraData, sceneObject){
-        camera = new WebGLCamera(gl,cameraData, sceneObject);
+        var c = new WebGLCamera(gl,cameraData, sceneObject);
+        if (cameras.length==0){
+            camera = c;
+        }
+        cameras.push(c);
+    }
+
+    this.getNumberOfCameras = function(){
+        return cameras.length;
+    }
+
+    this.setActiveCamera = function(index){
+        camera = cameras[index];
+        activeCameraIndex = index;
+    }
+
+    this.getActiveCameraIndex = function(){
+        return activeCameraIndex;
     }
 
     this.sceneDraw = function () {
