@@ -1,14 +1,6 @@
-//*****************************************************************************
-/*!	\file importexport_menu.cpp
- 	\brief Defines the callbacks that implement the Import Export demo menu.
-
-	Copyright 2008 Autodesk, Inc.  All rights reserved.  
-	Use of this software is subject to the terms of the Autodesk license agreement 
-	provided at the time of installation or download, or which otherwise accompanies 
-	this software in either electronic or hard copy form.   
- 
- */
-//*****************************************************************************
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
 
 
 #include <xsi_context.h>

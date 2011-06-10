@@ -1,3 +1,8 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 #pragma once
 #include <xsi_application.h>
 #include <xsi_model.h>
@@ -16,10 +21,10 @@ public:
 	bool runExport();
 	
 private:
-	void exportSceneProperties(CMeshFileWriter &mfw);
-	void exportSceneTextures(CMeshFileWriter &mfw);
-	void exportSceneMaterials(CMeshFileWriter &mfw);
-	void exportSceneMaterial(CMeshFileWriter &mfw,
+	void exportSceneProperties(JSONFileWriter &mfw);
+	void exportSceneTextures(JSONFileWriter &mfw);
+	void exportSceneMaterials(JSONFileWriter &mfw);
+	void exportSceneMaterial(JSONFileWriter &mfw,
 		XSI::CString name, 
 		XSI::CString shaderName,
 		XSI::CString diffuseTexture,
@@ -27,14 +32,14 @@ private:
 		XSI::CFloatArray specularColor,
 		XSI::CFloatArray ambientColor,
 		float specularExponent);
-	void exportSceneObjects(CMeshFileWriter &mfw, bool &first);
-	void exportSceneObjects(CMeshFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first);
-	bool exportCamera(CMeshFileWriter &mfw, XSI::Camera cameraObj);
+	void exportSceneObjects(JSONFileWriter &mfw, bool &first);
+	void exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first);
+	bool exportCamera(JSONFileWriter &mfw, XSI::Camera cameraObj);
 	bool exportJSONObject(XSI::X3DObject &object);
-	void exportLight(CMeshFileWriter &mfw, XSI::Light light);
+	void exportLight(JSONFileWriter &mfw, XSI::Light light);
 	XSI::CString getValidName(XSI::CString &string);
-	void writeExportedObjectUrl(CMeshFileWriter &mfw,XSI::X3DObject &obj);
-	void writeExportedMaterialRef(CMeshFileWriter &mfw,XSI::X3DObject &obj);
+	void writeExportedObjectUrl(JSONFileWriter &mfw,XSI::X3DObject &obj);
+	void writeExportedMaterialRef(JSONFileWriter &mfw,XSI::X3DObject &obj);
 	XSI::CString getFilename(XSI::CString fullFilePath);
 	void copyFile(XSI::CString fullFilePath, XSI::CString filename);
 

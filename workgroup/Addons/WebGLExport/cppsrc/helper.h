@@ -1,3 +1,8 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 //*****************************************************************************
 /*!	\file helper.h
 	\brief Helper classes for reading and writing mesh data.
@@ -17,18 +22,18 @@ class XSI::CStatus;
 class XSI::CFloatArray;
 
 //*****************************************************************************
-/*! \class CMeshFileWriter helper.h
+/*! \class JSONFileWriter helper.h
 	Helper class for writing mesh data to a text file.
-	A mesh exported with CMeshFileWriter can be imported with CMeshFileReader.
+	A mesh exported with JSONFileWriter can be imported with CMeshFileReader.
  */
 //*****************************************************************************
 
-class CMeshFileWriter
+class JSONFileWriter
 {
 	public:
 
-	CMeshFileWriter();
-	~CMeshFileWriter();
+	JSONFileWriter();
+	~JSONFileWriter();
 
 	XSI::CStatus Init(const XSI::CString& directory,const XSI::CString& in_outFile);
 
@@ -49,7 +54,7 @@ class CMeshFileWriter
 };
 
 template< class T >
-void OutputJSONArray( CMeshFileWriter& in_mfw, T& in_array ) {	
+void OutputJSONArray( JSONFileWriter& in_mfw, T& in_array ) {	
 	int count = in_array.GetCount();
 
 	in_mfw.Write( L"[" );

@@ -1,15 +1,6 @@
-//*****************************************************************************
-/*!	\file importexport_prop.cpp
- 	\brief Defines the callbacks that define the layout and behavior of the 
- 	Import Export Demo property page.
-
-	Copyright 2008 Autodesk, Inc.  All rights reserved.  
-	Use of this software is subject to the terms of the Autodesk license agreement 
-	provided at the time of installation or download, or which otherwise accompanies 
-	this software in either electronic or hard copy form.   
- 
- */
-//*****************************************************************************
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
 
 #include <xsi_application.h>
 #include <xsi_model.h>
@@ -84,13 +75,7 @@ XSI::CStatus WebGLExportProp_Define( XSI::CRef& in_ctxt )
 	XSI::CustomProperty pset( ctxt.GetSource() );
 	
 	XSI::Parameter param;
-	/*pset.AddParameter(L"ConstMode",XSI::CValue::siInt4,XSI::siPersistable,L"",L"",(LONG)0,(LONG)0,(LONG)4,(LONG)0,(LONG)4,param);
-	pset.AddParameter(L"Subd_level",XSI::CValue::siInt4,XSI::siPersistable,L"",L"",(LONG)0,(LONG)0,(LONG)6,(LONG)0,(LONG)6,param);
-	pset.AddParameter(L"Subd_type",XSI::CValue::siInt4,XSI::siPersistable,L"",L"",(LONG)0,(LONG)0,(LONG)3,(LONG)0,(LONG)3,param);
-	pset.AddParameter(L"DiscAngle",XSI::CValue::siDouble,XSI::siPersistable,L"",L"",(LONG)0,(LONG)0,(LONG)360,(LONG)0,(LONG)360,param);
-	pset.AddParameter(L"UseDisc",XSI::CValue::siBool, XSI::siPersistable, L"", L"", false, param );	
-	pset.AddParameter(L"MeshChunkSize",XSI::CValue::siInt4,XSI::siPersistable,L"",L"",(LONG)100,param);
-	*/
+	
 	XSI::Application app;
 	
 	XSI::CString strDefaultFile( app.GetInstallationPath( XSI::siProjectPath ) );
@@ -129,71 +114,7 @@ XSI::CStatus WebGLExportProp_DefineLayout( XSI::CRef& in_ctxt )
 	XSI::PPGLayout ppg = ctxt.GetSource() ;
 
 	ppg.Clear();
-	/*
-	// define the geometry section
-	ppg.AddGroup(L"Geometry");
 	
-	LONG labelMinPixels = LABEL_MIN;
-	LONG labelPercentage = LABEL_RATIO;
-
-	XSI::CValueArray uiModeItems(10) ;
-	uiModeItems[0] = L"Modeling" ; 
-	uiModeItems[1] = (LONG)XSI::siConstructionModeModeling;
-	uiModeItems[2] = L"Primary Shape" ; 
-	uiModeItems[3] = (LONG)XSI::siConstructionModePrimaryShape;
-	uiModeItems[4] = L"Animation" ; 
-	uiModeItems[5] = (LONG)XSI::siConstructionModeAnimation;
-	uiModeItems[6] = L"Secondary Shape" ; 
-	uiModeItems[7] = (LONG)XSI::siConstructionModeSecondaryShape;
-	uiModeItems[8] = L"Default" ; 
-	uiModeItems[9] = (LONG)XSI::siConstructionModeDefault;
-
-	XSI::PPGItem item = ppg.AddEnumControl(
-		L"ConstMode",
-		uiModeItems,
-		L"Choice",
-		XSI::siControlCombo ) ;
-	item.PutLabel(L"Construction Mode");
-
-	item.PutLabelMinPixels( labelMinPixels );
- 	item.PutLabelPercentage( labelPercentage );
-	
-	item = ppg.AddItem( L"Subd_level" ) ;
-	item.PutLabel(L"Subdivision level");
-	
-	item.PutLabelMinPixels( labelMinPixels );
- 	item.PutLabelPercentage( labelPercentage );
-
-	XSI::CValueArray uiSubdTypeItems(6) ;
-	uiSubdTypeItems[0] = L"Catmull-Clark" ; 
-	uiSubdTypeItems[1] = (LONG)XSI::siCatmullClark;
-	uiSubdTypeItems[2] = L"XSI-Doo-Sabin" ; 
-	uiSubdTypeItems[3] = (LONG)XSI::siXSIDooSabin;
-	uiSubdTypeItems[4] = L"Linear" ; 
-	uiSubdTypeItems[5] = (LONG)XSI::siLinearSubdivision;
-
-	item = ppg.AddEnumControl(
-		L"Subd_type",
-		uiSubdTypeItems,
-		L"Choice",
-		XSI::siControlCombo ) ;
-	item.PutLabel(L"Subdivision Rule Type");
-		
-	item.PutLabelMinPixels( labelMinPixels );
- 	item.PutLabelPercentage( labelPercentage );
-
-	item = ppg.AddItem( L"DiscAngle" ) ;
-	item.PutLabel(L"Discontinuity Angle");
-	item.PutLabelMinPixels( labelMinPixels );
- 	item.PutLabelPercentage( labelPercentage );
-
-	item = ppg.AddItem( L"UseDisc" ) ;
-	item.PutLabel(L"Use Discontinuity");
-	item.PutLabelMinPixels( labelMinPixels );
- 	item.PutLabelPercentage( labelPercentage );
-
-	ppg.EndGroup();
-	*/
 	// define the webgl section
 	LONG labelMinPixels = LABEL_MIN;
 	LONG labelPercentage = LABEL_RATIO;

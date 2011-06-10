@@ -1,4 +1,4 @@
-﻿Build started 10-06-2011 13:14:01.
+﻿Build started 10-06-2011 13:26:08.
      1>Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "x64\Release\WebGLExporter.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -20,8 +20,16 @@
          Bin2CPP Output > Resource13.h
          Bin2CPP Output > Resource14.h
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Autodesk\Softimage 2011\XSISDK\include" /Zi /nologo /W1 /WX- /O2 /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt DependencyExporter.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Autodesk\Softimage 2011\XSISDK\include" /Zi /nologo /W1 /WX- /O2 /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt DependencyExporter.cpp WebGLExport.cpp WebGLExportCommand.cpp WebGLExport_menu.cpp WebGLExport_prop.cpp WebGLMeshExport.cpp exportmesh_command.cpp helper.cpp
          DependencyExporter.cpp
+         WebGLExport.cpp
+         WebGLExportCommand.cpp
+         WebGLExport_menu.cpp
+         WebGLExport_prop.cpp
+         WebGLMeshExport.cpp
+         exportmesh_command.cpp
+         helper.cpp
+         Generating Code...
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\x64\Release\WebGLExporter.dll) does not match the Linker's OutputFile property value (C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\Application\Plugins\WebGLExporter.64.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(WebGLExporter) does not match the Linker's OutputFile property value (WebGLExporter.64). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
        Link:
@@ -33,15 +41,9 @@
          x64\Release\WebGLExport_menu.obj
          x64\Release\WebGLExport_prop.obj
          x64\Release\WebGLMeshExport.obj
-            Creating library x64\Release\WebGLExporter.lib and object x64\Release\WebGLExporter.exp
-         WebGLExport.vcxproj -> C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\x64\Release\WebGLExporter.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../Application/Plugins/WebGLExporter.64.dll;#2" /manifest x64\Release\WebGLExporter.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Deleting file "x64\Release\WebGLExporter.unsuccessfulbuild".
-         Touching "x64\Release\WebGLExporter.lastbuildstate".
-     1>Done Building Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" (build target(s)).
+     1>LINK : fatal error LNK1104: cannot open file '../Application/Plugins/WebGLExporter.64.dll'
+     1>Done Building Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.84
+Time Elapsed 00:00:07.18

@@ -1,3 +1,7 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
 #include "WebGLMeshExport.h"
 
 #include <xsi_application.h>
@@ -61,7 +65,7 @@ bool WebGLMeshExport::exportJSONObject(XSI::CString outputDirectory){
 	XSI::CString filename = name+".json";
 
 	// prepare the output text file
-	CMeshFileWriter mfw;
+	JSONFileWriter mfw;
 	XSI::CStatus st = mfw.Init(outputDirectory,  filename);
 	if (st!=XSI::CStatus::OK) return false;
 
@@ -85,7 +89,7 @@ bool WebGLMeshExport::exportJSONObject(XSI::CString outputDirectory){
 	return true;
 }
 
-void WebGLMeshExport::exportVertexPositions(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
+void WebGLMeshExport::exportVertexPositions(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
 	// problem: We are interested in vertex per node, but only have vertex index per node
 	// to solve this must loop though all nodes and fill in the correct vertices
 	
@@ -125,7 +129,7 @@ void WebGLMeshExport::exportVertexPositions(CMeshFileWriter &mfw, XSI::CGeometry
 	OutputJSONArray( mfw, data );
 }
 
-void WebGLMeshExport::exportVertexNormals(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
+void WebGLMeshExport::exportVertexNormals(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
 	// polygon node normals
 	XSI::CFloatArray nodeArray;
 	XSI::CStatus st = in_ga.GetNodeNormals(nodeArray);
@@ -134,7 +138,7 @@ void WebGLMeshExport::exportVertexNormals(CMeshFileWriter &mfw, XSI::CGeometryAc
 	OutputJSONArray( mfw, nodeArray );
 }
 
-void WebGLMeshExport::exportVertexTextureCoords(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
+void WebGLMeshExport::exportVertexTextureCoords(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
 	// problem: We are interested in vertex per node, but only have vertex index per node
 	// to solve this must loop though all nodes and fill in the correct vertices
 	
@@ -168,7 +172,7 @@ void WebGLMeshExport::exportVertexTextureCoords(CMeshFileWriter &mfw, XSI::CGeom
 	OutputJSONArray( mfw, data );
 }
 
-void WebGLMeshExport::exportIndices(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
+void WebGLMeshExport::exportIndices(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga){
 	// polygon triangle vertex indices
 	XSI::CLongArray triVtxIdxArray;
 	XSI::CStatus st = in_ga.GetTriangleVertexIndices(triVtxIdxArray);
@@ -187,7 +191,7 @@ void WebGLMeshExport::exportIndices(CMeshFileWriter &mfw, XSI::CGeometryAccessor
 	OutputPolygonComponentsJSON(mfw, triNodeIdxArray, triSizeArray);	
 }
 
-void WebGLMeshExport::OutputPolygonComponentsJSON(CMeshFileWriter& in_mfw, XSI::CLongArray& in_indexArray, 
+void WebGLMeshExport::OutputPolygonComponentsJSON(JSONFileWriter& in_mfw, XSI::CLongArray& in_indexArray, 
 		XSI::CLongArray& in_polySizeArray){
 	in_mfw.Write( L"[" );
 	for (LONG i=0, offset=0; i<in_polySizeArray.GetCount(); i++)

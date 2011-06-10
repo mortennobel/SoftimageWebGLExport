@@ -1,11 +1,11 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 //*****************************************************************************
 /*!	\file helper.cpp
-	\brief Helper classes for reading and writing mesh data.
-	
-	Copyright 2008 Autodesk, Inc.  All rights reserved.  
-	Use of this software is subject to the terms of the Autodesk license agreement 
-	provided at the time of installation or download, or which otherwise accompanies 
-	this software in either electronic or hard copy form.   
+	\brief Helper classes for reading and writing mesh data.	
 */
 //*****************************************************************************
 
@@ -31,8 +31,8 @@
 bool createDirectoryIfNotExist(const XSI::CString& directory);
 
 // logger
-CMeshFileWriter::CMeshFileWriter() : p (NULL) {}
-CMeshFileWriter::~CMeshFileWriter()
+JSONFileWriter::JSONFileWriter() : p (NULL) {}
+JSONFileWriter::~JSONFileWriter()
 {
 	if (p)
 	{
@@ -40,7 +40,7 @@ CMeshFileWriter::~CMeshFileWriter()
 	}
 }
 
-XSI::CStatus CMeshFileWriter::Init(const XSI::CString& directory,const XSI::CString& in_outFile )
+XSI::CStatus JSONFileWriter::Init(const XSI::CString& directory,const XSI::CString& in_outFile )
 {
 	XSI::CString file;
 	file += directory;
@@ -61,7 +61,7 @@ XSI::CStatus CMeshFileWriter::Init(const XSI::CString& directory,const XSI::CStr
 	return XSI::CStatus::OK;	
 }
 
-void CMeshFileWriter::Header( const XSI::CString& in_strText )
+void JSONFileWriter::Header( const XSI::CString& in_strText )
 {	
 	Write( L"\n" );
 	XSI::CString str = in_strText;
@@ -70,12 +70,12 @@ void CMeshFileWriter::Header( const XSI::CString& in_strText )
 	Write( str );
 }
 
-void CMeshFileWriter::Footer()
+void JSONFileWriter::Footer()
 {
 	Write( L"}\n\n" );
 }
 
-void CMeshFileWriter::Write( const XSI::CString& in_str, bool quoted )
+void JSONFileWriter::Write( const XSI::CString& in_str, bool quoted )
 {	
 	if (quoted) fwrite("\"",sizeof(char),1,p);
 	XSI::CStringArray sArray = in_str.Split("\\");
@@ -90,7 +90,7 @@ void CMeshFileWriter::Write( const XSI::CString& in_str, bool quoted )
 	if (quoted) fwrite("\"",sizeof(char),1,p);
 }
 
-void CMeshFileWriter::Write( XSI::CFloatArray values){
+void JSONFileWriter::Write( XSI::CFloatArray values){
 	Write(L"[");
 	for (int i=0;i<values.GetCount();i++){
 		if (i>0){
@@ -102,23 +102,23 @@ void CMeshFileWriter::Write( XSI::CFloatArray values){
 }
 
 
-void CMeshFileWriter::Write( const wchar_t* in_pstr, bool quoted )
+void JSONFileWriter::Write( const wchar_t* in_pstr, bool quoted )
 {
 	XSI::CString str(in_pstr);
 	Write( str,quoted );
 }
 
-void CMeshFileWriter::Write( const char* in_pstr, bool quoted ){
+void JSONFileWriter::Write( const char* in_pstr, bool quoted ){
 	const XSI::CString s(in_pstr);
 	Write(s,quoted);
 }
 
-void CMeshFileWriter::Write( XSI::CValue in_val )
+void JSONFileWriter::Write( XSI::CValue in_val )
 {
 	Write( in_val.GetAsText().GetWideString() );
 }
 
-void CMeshFileWriter::EOL(bool addComma)
+void JSONFileWriter::EOL(bool addComma)
 {
 	if (addComma){
 		Write( L"," );
@@ -126,7 +126,7 @@ void CMeshFileWriter::EOL(bool addComma)
 	Write( L"\n" );
 }
 
-void CMeshFileWriter::WriteParamHead(const wchar_t *name, int tabIndent){
+void JSONFileWriter::WriteParamHead(const wchar_t *name, int tabIndent){
 	for (int i=0;i<tabIndent;i++){
 		Write( L"\t" );
 	}
@@ -135,7 +135,7 @@ void CMeshFileWriter::WriteParamHead(const wchar_t *name, int tabIndent){
 	Write( L"\" : " );
 }
 
-void CMeshFileWriter::WriteCBracketEnd(int tabIndent,bool addComma ){
+void JSONFileWriter::WriteCBracketEnd(int tabIndent,bool addComma ){
 	for (int i=0;i<tabIndent;i++){
 		Write( L"\t" );
 	}

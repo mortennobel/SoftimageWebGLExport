@@ -1,3 +1,8 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 var degreeToRadian = 0.0174532925;
 
 function WebGLRenderer(){

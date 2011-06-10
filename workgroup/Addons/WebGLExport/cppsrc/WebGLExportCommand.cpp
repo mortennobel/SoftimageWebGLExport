@@ -1,3 +1,8 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 #include "WebGLExportCommand.h"
 #include <istream>
 #include <iostream>
@@ -69,7 +74,7 @@ bool WebGLExportCommand::runExport(){
 	if (!project.IsValid()) return false;
 	if (!scene.IsValid()) return false;
 	XSI::CString strOut = GetWebGLExportOption( L"ExportDir" ).GetValue();
-	CMeshFileWriter mfw;
+	JSONFileWriter mfw;
 	XSI::CStatus st = mfw.Init(strOut,  L"scene.json");
 	if (st!=XSI::CStatus::OK)
 	{
@@ -108,7 +113,7 @@ bool WebGLExportCommand::runExport(){
 	return true;
 }
 
-void WebGLExportCommand::exportSceneProperties(CMeshFileWriter &mfw){
+void WebGLExportCommand::exportSceneProperties(JSONFileWriter &mfw){
 	mfw.WriteParamHead( L"projectPath");
 	mfw.Write( project.GetPath() ,true);
 	mfw.EOL(true);
@@ -141,7 +146,7 @@ void WebGLExportCommand::exportSceneProperties(CMeshFileWriter &mfw){
 }
 
 
-void WebGLExportCommand::exportSceneTextures(CMeshFileWriter &mfw){
+void WebGLExportCommand::exportSceneTextures(JSONFileWriter &mfw){
 	mfw.Write( L"\t\t{" );
 	mfw.EOL();
 	mfw.WriteParamHead( L"name",3);
@@ -194,7 +199,7 @@ void WebGLExportCommand::exportSceneTextures(CMeshFileWriter &mfw){
 	}
 }
 
-void WebGLExportCommand::exportSceneMaterials(CMeshFileWriter &mfw){
+void WebGLExportCommand::exportSceneMaterials(JSONFileWriter &mfw){
 	XSI::CFloatArray diffuse(3);
 	XSI::CFloatArray specular(3);
 	XSI::CFloatArray ambient(3);
@@ -266,7 +271,7 @@ void WebGLExportCommand::exportSceneMaterials(CMeshFileWriter &mfw){
 	}
 }
 
-void WebGLExportCommand::exportSceneMaterial(CMeshFileWriter &mfw,
+void WebGLExportCommand::exportSceneMaterial(JSONFileWriter &mfw,
 		XSI::CString name, 
 		XSI::CString shaderName,
 		XSI::CString diffuseTexture,
@@ -308,7 +313,7 @@ void WebGLExportCommand::exportSceneMaterial(CMeshFileWriter &mfw,
 	mfw.EOL( );	
 }
 
-void WebGLExportCommand::exportSceneObjects(CMeshFileWriter &mfw, bool &first){
+void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw, bool &first){
 	mfw.WriteParamHead( L"sceneObjects");
 	mfw.Write( L"[" );
 	mfw.EOL();
@@ -325,7 +330,7 @@ void WebGLExportCommand::exportSceneObjects(CMeshFileWriter &mfw, bool &first){
 	mfw.EOL();
 }
 
-void WebGLExportCommand::exportSceneObjects(CMeshFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first){
+void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first){
 	XSI::CRefArray children = obj.GetChildren();
 	
 	bool hasParent = parent.Length()>0;
@@ -407,7 +412,7 @@ void WebGLExportCommand::exportSceneObjects(CMeshFileWriter &mfw,XSI::X3DObject 
 	mfw.EOL();
 }
 
-bool WebGLExportCommand::exportCamera(CMeshFileWriter &mfw, XSI::Camera cameraObj){
+bool WebGLExportCommand::exportCamera(JSONFileWriter &mfw, XSI::Camera cameraObj){
 	XSI::MATH::CRotation rotation = cameraObj.GetLocalRotation();
 	XSI::MATH::CVector3 translation = cameraObj.GetLocalTranslation();
 	
@@ -478,7 +483,7 @@ bool WebGLExportCommand::exportJSONObject(XSI::X3DObject &object){
 	return exportMesh.exportJSONObject(outputDir);
 }
 
-void WebGLExportCommand::exportLight(CMeshFileWriter &mfw, XSI::Light light){
+void WebGLExportCommand::exportLight(JSONFileWriter &mfw, XSI::Light light){
 	XSI::OGLLight oglLight = light.GetOGLLight();
 	XSI::siLightType lightType = oglLight.GetType();
 	mfw.Write(L"\t\t\t\t{");
@@ -545,7 +550,7 @@ XSI::CString WebGLExportCommand::getValidName(XSI::CString &string){
 	return output;
 }
 
-void WebGLExportCommand::writeExportedObjectUrl(CMeshFileWriter &mfw,XSI::X3DObject &obj){
+void WebGLExportCommand::writeExportedObjectUrl(JSONFileWriter &mfw,XSI::X3DObject &obj){
 	mfw.Write(L"\t\t\t\t{");
 	mfw.EOL();
 	mfw.WriteParamHead( L"type",5);
@@ -559,7 +564,7 @@ void WebGLExportCommand::writeExportedObjectUrl(CMeshFileWriter &mfw,XSI::X3DObj
 	mfw.EOL();
 }
 
-void WebGLExportCommand::writeExportedMaterialRef(CMeshFileWriter &mfw,XSI::X3DObject &obj){
+void WebGLExportCommand::writeExportedMaterialRef(JSONFileWriter &mfw,XSI::X3DObject &obj){
 	mfw.Write(L"\t\t\t\t,");
 	mfw.Write(L"\t\t\t\t{");
 	mfw.EOL();

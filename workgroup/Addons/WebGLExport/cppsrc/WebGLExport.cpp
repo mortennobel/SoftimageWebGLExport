@@ -1,3 +1,8 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
+
 #include <xsi_pluginregistrar.h>
 #include <xsi_status.h>
 #include <xsi_decl.h>

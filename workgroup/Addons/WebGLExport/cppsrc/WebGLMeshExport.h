@@ -1,3 +1,7 @@
+/// License: Creative Commons Attribution 3.0 Unported (http://creativecommons.org/licenses/by/3.0/)
+/// 2011 Morten Nobel-Joergensen / Vaida Laganeckiene
+/// https://github.com/mortennobel/SoftimageWebGLExport
+
 #pragma once
 
 #include <xsi_x3dobject.h>
@@ -15,11 +19,11 @@ public:
 	bool exportJSONObject(XSI::CString outputDirectory);
 	
 private:
-	void exportVertexPositions(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
-	void exportVertexNormals(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
-	void exportVertexTextureCoords(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
-	void exportIndices(CMeshFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
-	void OutputPolygonComponentsJSON(CMeshFileWriter& in_mfw, XSI::CLongArray& in_indexArray, XSI::CLongArray& in_polySizeArray);
+	void exportVertexPositions(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
+	void exportVertexNormals(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
+	void exportVertexTextureCoords(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
+	void exportIndices(JSONFileWriter &mfw, XSI::CGeometryAccessor& in_ga);
+	void OutputPolygonComponentsJSON(JSONFileWriter& in_mfw, XSI::CLongArray& in_indexArray, XSI::CLongArray& in_polySizeArray);
 
 	XSI::X3DObject &object;
 	XSI::CString name;
