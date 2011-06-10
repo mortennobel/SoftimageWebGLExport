@@ -1,0 +1,1 @@
+This C++ example shows how to create a UI for an import/export tool, export geometry using the CGeometryAccessor class, and import polygon meshes using the CMeshBuilder class.

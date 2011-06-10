@@ -1,0 +1,991 @@
+{
+	"projectPath" : "C:\\Users\\Morten\\Documents\\My Dropbox\\DTU - AnimationAndModelling\\Miniproject3",
+	"sceneName" : "C:\\Users\\Morten\\Documents\\My Dropbox\\DTU - AnimationAndModelling\\Miniproject3\\Scenes\\Scene2.scn",
+	"origin" : "SoftImage (by WebGLExporter)",
+	"shaders" : ["phong","phong_color"],
+	"textures" : [
+		{
+			"name" : "defaultTexture",
+			"url" : "default-texture.jpg"
+		}
+
+		,
+		{
+			"name" : "noIconpic(3754)",
+			"warning_unsupported_file_name" : "noIcon.pic",
+			"url" : "default-texture.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4292450x454jpg(3780)",
+			"url" : "dscf4292-450x454.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4292jpg(3810)",
+			"url" : "dscf4292.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4296jpg(3817)",
+			"url" : "dscf4296.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4296jpg1(3796)",
+			"url" : "dscf4296.jpg"
+		}
+
+		,
+		{
+			"name" : "llbeansignaturevintagefieldwatchselectism2jpg(3803)",
+			"url" : "llbean-signature-vintage-field-watch-selectism-2.jpg"
+		}
+
+		,
+		{
+			"name" : "llbeansignaturevintagefieldwatchselectism2jpg1(3838)",
+			"url" : "llbean-signature-vintage-field-watch-selectism-2.jpg"
+		}
+
+		,
+		{
+			"name" : "bgvintheritagesmjpg(3845)",
+			"url" : "bg_vint_heritage_sm.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4292jpg1(3824)",
+			"url" : "dscf4292.jpg"
+		}
+
+		,
+		{
+			"name" : "dscf4292jpg2(3831)",
+			"url" : "dscf4292.jpg"
+		}
+
+		,
+		{
+			"name" : "Leather0090LcolorCOLORpng(3741)",
+			"url" : "Leather0090_L_color_COLOR.png"
+		}
+
+		,
+		{
+			"name" : "Leather0090LcolorSPECpng(3637)",
+			"url" : "Leather0090_L_color_SPEC.png"
+		}
+
+		,
+		{
+			"name" : "Leather0090LcolorNRMpng(3638)",
+			"url" : "Leather0090_L_color_NRM.png"
+		}
+
+		,
+		{
+			"name" : "glassscratchesjpg(3602)",
+			"url" : "glass_scratches.jpg"
+		}
+
+		,
+		{
+			"name" : "glassdirtjpg(3636)",
+			"url" : "glass_dirt.jpg"
+		}
+
+		,
+		{
+			"name" : "Environmentmapjpg(3756)",
+			"url" : "Environment_map.jpg"
+		}
+
+		,
+		{
+			"name" : "WoodFine00011Sjpg(3640)",
+			"url" : "WoodFine0001_1_S_COLOR.png"
+		}
+
+		,
+		{
+			"name" : "Leather0090LcolorCOLORpng1(3750)",
+			"url" : "Leather0090_L_color_COLOR.png"
+		}
+
+		,
+		{
+			"name" : "clockopengearsjpg(3806)",
+			"url" : "clock-open-gears.jpg"
+		}
+
+		,
+		{
+			"name" : "Carpet00433Sjpg(3674)",
+			"url" : "Carpet0043_3_S.jpg"
+		}
+
+		,
+		{
+			"name" : "WallpaperSeventies0013Sjpg(3670)",
+			"url" : "WallpaperSeventies0013_S.jpg"
+		}
+
+		,
+		{
+			"name" : "watchjpg(3681)",
+			"url" : "watch.jpg"
+		}
+
+		,
+		{
+			"name" : "WoodFine00011SSPECpng(3641)",
+			"url" : "WoodFine0001_1_S_SPEC.png"
+		}
+
+		,
+		{
+			"name" : "WoodFine00011SNRMpng(3647)",
+			"url" : "WoodFine0001_1_S_NRM.png"
+		}
+
+		,
+		{
+			"name" : "WoodFine00011SNRMpng1(3676)",
+			"url" : "WoodFine0001_1_S_NRM.png"
+		}
+
+		,
+		{
+			"name" : "MetalBare00844SNRMjpg(4150)",
+			"url" : "MetalBare0084_4_S_NRM.jpg"
+		}
+
+		,
+		{
+			"name" : "MetalBare00844SSPECjpg(4173)",
+			"url" : "MetalBare0084_4_S_SPEC.jpg"
+		}
+
+		,
+		{
+			"name" : "MetalScratches0007Sjpg(4217)",
+			"url" : "MetalScratches0007_S.jpg"
+		}
+
+		,
+		{
+			"name" : "MetalScratches0007SSPECjpg(4240)",
+			"url" : "MetalScratches0007_S_SPEC.jpg"
+		}
+
+		,
+		{
+			"name" : "MetalScratches0007Sjpg1(4231)",
+			"url" : "MetalScratches0007_S.jpg"
+		}
+	],
+	"materials" : [
+		{
+			"name" : "default_material",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "defaultTexture",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.7,0.7,0.7],
+				"specularExponent" : 60
+			}
+		}
+		,
+		{
+			"name" : "SceneMaterial",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Metal",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material1",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.277,0.119,0],
+				"specularColor" : [0,0,0],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material2",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.277,0.119,0],
+				"specularColor" : [0,0,0],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "glassmaterial",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.277,0.119,0],
+				"specularColor" : [0,0,0],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "watchrem",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "Leather0090LcolorCOLORpng1(3750)",
+				"diffuseColor" : [0.494,0.294,0],
+				"specularColor" : [0.089,0.089,0.089],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 20
+			}
+		}
+		,
+		{
+			"name" : "Material5",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Wood",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "watchinternalmetal",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "watchinternalcobber",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material9",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material10",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material11",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "watchinternal3",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "bronze",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material12",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material13",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "WoodFine00011Sjpg(3640)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [0.1,0.1,0.1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material14",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "watchjpg(3681)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Watcharrows",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "watchjpg(3681)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "watchinternalbackground",
+			"shader" : "phong",
+			"parameters" : {
+				"diffuseTexture" : "watchjpg(3681)",
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Material15",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+		,
+		{
+			"name" : "Ceiling",
+			"shader" : "phong_color",
+			"parameters" : {
+				"diffuseColor" : [0.7,0.7,0.7],
+				"specularColor" : [1,1,1],
+				"ambientColor" : [0.3,0.3,0.3],
+				"specularExponent" : 50
+			}
+		}
+	],
+	"sceneObjects" : [
+		{
+			"name" : "Camera(500)",
+			"displayName" : "Camera",
+			"parent" : "CameraRoot(272)",
+			"transform" : {
+				"localTranslation" : [15.5545,7.05076,-0.0677097],
+				"localRotation" : [-22.5103,89.5012,-2.10249e-010],
+				"localScaling" : [1,1,1]
+				},
+			"components" : [
+				{
+					"type" : "camera",
+					"near" : 0.1,
+					"far" : 32768,
+					"cameraType" : "perspective",
+					"fieldOfView" : 60
+				}
+			]
+		}
+		,
+		{
+			"name" : "CameraInterest(501)",
+			"displayName" : "Camera_Interest",
+			"parent" : "CameraRoot(272)",
+			"transform" : {
+				"localTranslation" : [-1.14041,0.131698,-0.21306],
+				"localRotation" : [6.98231e-015,1.55301e-016,180],
+				"localScaling" : [1,1,1]
+				},
+			"components" : [
+			]
+		}
+		,
+		{
+			"name" : "CameraRoot(272)",
+			"displayName" : "Camera_Root",
+			"parent" : "",
+			"transform" : {
+				"localTranslation" : [0,0,0],
+				"localRotation" : [0,0,0],
+				"localScaling" : [1,1,1]
+				},
+			"components" : [
+			]
+		}
+		,
+		{
+			"name" : "TextureSupport(375)",
+			"displayName" : "Texture_Support",
+			"parent" : "table(315)",
+			"transform" : {
+				"localTranslation" : [0,-59.0156,0],
+				"localRotation" : [0,0,0],
+				"localScaling" : [1,1,1]
+				},
+			"components" : [
+			]
+		}
+		,
+		{
+			"name" : "table(315)",
+			"displayName" : "table",
+			"parent" : "",
+			"transform" : {
+				"localTranslation" : [-2.76398,-0.348396,-0.138704],
+				"localRotation" : [0,0,0],
+				"localScaling" : [1.39371,0.089302,1.39371]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "table(315).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Wood"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchinternalbackground1(8135)",
+			"displayName" : "watch_internal_background1",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [-0.421616,1.2157,-0.158545],
+				"localRotation" : [0,-176.934,0],
+				"localScaling" : [0.64527,0.64527,0.64527]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchinternalbackground1(8135).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "watchinternalbackground"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchgear1(6264)",
+			"displayName" : "watch_gear_1",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [0.480403,1.3217,0.416757],
+				"localRotation" : [0,-176.934,0],
+				"localScaling" : [0.912691,0.64527,0.912691]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchgear1(6264).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "watchinternalcobber"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchgear2(6993)",
+			"displayName" : "watch_gear_2",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [-0.38953,1.24764,-0.11491],
+				"localRotation" : [0,-176.934,0],
+				"localScaling" : [0.912691,0.64527,0.912691]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchgear2(6993).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "bronze"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchgear3(5010)",
+			"displayName" : "watch_gear_3",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [-0.232929,1.38775,1.74476],
+				"localRotation" : [0,-6.01871,0],
+				"localScaling" : [0.658241,0.658241,0.658241]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchgear3(5010).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "bronze"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchgear4(3426)",
+			"displayName" : "watch_gear_4",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [-1.93625,1.38775,0.698133],
+				"localRotation" : [0,0,0],
+				"localScaling" : [1.12619,0.64527,1.12619]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchgear4(3426).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "bronze"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchinternalstruct(7774)",
+			"displayName" : "watch_internal_struct",
+			"parent" : "watchinternals(3707)",
+			"transform" : {
+				"localTranslation" : [1.97992,1.35924,1.60535],
+				"localRotation" : [0,148.101,0],
+				"localScaling" : [0.253664,0.141698,0.253664]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "watchinternalstruct(7774).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "watchinternal3"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watchinternals(3707)",
+			"displayName" : "watch_internals",
+			"parent" : "watchroot(582)",
+			"transform" : {
+				"localTranslation" : [0,-0.165361,0],
+				"localRotation" : [0,-16.7782,0],
+				"localScaling" : [1,1,1]
+				},
+			"components" : [
+			]
+		}
+		,
+		{
+			"name" : "hourmark(912)",
+			"displayName" : "hour_mark",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [0.359798,0.372585,-0.629233],
+				"localRotation" : [-90,-30,-9.18147e-015],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark(912).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark1(638)",
+			"displayName" : "hour_mark1",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [0.626211,0.372585,-0.365033],
+				"localRotation" : [-90,-60,-3.18055e-014],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark1(638).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark2(639)",
+			"displayName" : "hour_mark2",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [0.629233,0.372585,0.359798],
+				"localRotation" : [-90,-120,5.08889e-014],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark2(639).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark3(688)",
+			"displayName" : "hour_mark3",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [0.365033,0.372585,0.626211],
+				"localRotation" : [-90,-150,0],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark3(688).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark4(770)",
+			"displayName" : "hour_mark4",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-0.359798,0.372585,0.629233],
+				"localRotation" : [-90,150,0],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark4(770).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark5(797)",
+			"displayName" : "hour_mark5",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-0.626211,0.372585,0.365033],
+				"localRotation" : [-90,120,-2.54444e-014],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark5(797).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark6(809)",
+			"displayName" : "hour_mark6",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-0.629233,0.372585,-0.359798],
+				"localRotation" : [-90,60,4.45278e-014],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark6(809).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark7(822)",
+			"displayName" : "hour_mark7",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-0.365033,0.372585,-0.626211],
+				"localRotation" : [-90,30,7.34518e-015],
+				"localScaling" : [0.00468534,0.354203,0.00275608]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark7(822).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark8(836)",
+			"displayName" : "hour_mark8",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-5.44457e-017,0.363667,-0.749474],
+				"localRotation" : [-90,2.61147e-062,-7.84067e-047],
+				"localScaling" : [0.0101628,0.315093,0.00266218]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark8(836).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark9(878)",
+			"displayName" : "hour_mark9",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [0.749474,0.363667,-1.76426e-016],
+				"localRotation" : [-45,-90,-45],
+				"localScaling" : [0.0101628,0.315093,0.00266218]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark9(878).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark10(946)",
+			"displayName" : "hour_mark10",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [2.33831e-016,0.363667,0.749474],
+				"localRotation" : [-90,180,0],
+				"localScaling" : [0.0101628,0.315093,0.00266218]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark10(946).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourmark11(1143)",
+			"displayName" : "hour_mark11",
+			"parent" : "watch(584)",
+			"transform" : {
+				"localTranslation" : [-0.749474,0.363667,-1.27854e-016],
+				"localRotation" : [-45,90,45],
+				"localScaling" : [0.0101628,0.315093,0.00266218]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "hourmark11(1143).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Watcharrows"
+				}
+			]
+		}
+		,
+		{
+			"name" : "watch(584)",
+			"displayName" : "watch",
+			"parent" : "watchexternals(2119)",
+			"transform" : {
+				"localTranslation" : [-0.507601,0.220784,-0.0778191],
+				"localRotation" : [-90,180,0],
+				"localScaling" : [3.62834,0.35433,3.62834]
+				},
+			"components" : [
+			]
+		}
+		,
+		{
+			"name" : "wheel(1790)",
+			"displayName" : "wheel",
+			"parent" : "watchexternals(2119)",
+			"transform" : {
+				"localTranslation" : [3.4602,0.239532,-0.210817],
+				"localRotation" : [0,0,90],
+				"localScaling" : [0.152854,0.102139,0.152854]
+				},
+			"components" : [
+				{
+					"type" : "mesh",
+					"url" : "wheel(1790).json"
+				}
+				,				{
+					"type" : "material",
+					"name" : "Metal"
+				}
+			]
+		}
+		,
+		{
+			"name" : "hourarrow(2009)",
+			"displayName" : "hour_arrow",
+			"parent" : "watchexternals(2119)",
+			"transform" : {
+				"localTranslation" : [-0.507601,0.220784,0.30264],
+				"localRotation" : [90,0,0],
+				"localScaling" : [0.270895,0.015625,0.270895]
+				},
+			"components" : [
+				{
+					"type" : "

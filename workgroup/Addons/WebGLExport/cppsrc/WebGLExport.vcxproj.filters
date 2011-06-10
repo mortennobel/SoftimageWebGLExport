@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="exportmesh_command.cpp" />
+    <ClCompile Include="helper.cpp" />
+    <ClCompile Include="WebGLExport.cpp" />
+    <ClCompile Include="WebGLExport_menu.cpp" />
+    <ClCompile Include="WebGLExport_prop.cpp" />
+    <ClCompile Include="DependencyExporter.cpp" />
+    <ClCompile Include="WebGLExportCommand.cpp" />
+    <ClCompile Include="WebGLMeshExport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="helper.h" />
+    <ClInclude Include="DependencyExporter.h" />
+    <ClInclude Include="Resource1.h" />
+    <ClInclude Include="Resource2.h" />
+    <ClInclude Include="Resource3.h" />
+    <ClInclude Include="Resource4.h" />
+    <ClInclude Include="Resource5.h" />
+    <ClInclude Include="Resource6.h" />
+    <ClInclude Include="Resource7.h" />
+    <ClInclude Include="Resource8.h" />
+    <ClInclude Include="Resource9.h" />
+    <ClInclude Include="Resource10.h" />
+    <ClInclude Include="Resource11.h" />
+    <ClInclude Include="Resource12.h" />
+    <ClInclude Include="WebGLExportCommand.h" />
+    <ClInclude Include="WebGLMeshExport.h" />
+    <ClInclude Include="Resource13.h" />
+    <ClInclude Include="Resource14.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pack-resources.bat" />
+  </ItemGroup>
+</Project>

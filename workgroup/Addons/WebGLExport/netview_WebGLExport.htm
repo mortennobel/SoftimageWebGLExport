@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>ImportExport</title>
+<link rel="StyleSheet" href="shared/examples.css" type="text/css">
+<script type="text/javascript" src="shared/utils.js"></script>
+</head>
+<body>
+<div class="body"><a name="top"></a>
+
+
+
+<img class="netview" src="netview_WebGLExport.png" style="float:left;padding-right:6px;" width="50%" height="50%">
+<h1>WebGL Export</h1>
+
+<p>The WebGL Export allows you to export a full scene to a WebGL webpage. 
+</p>
+
+<h2>Supported features</h2>
+<ul>
+<li>Polygon mesh (max 64.000 vertex indices)</li>
+<li>Directional light (one)</li>
+<li>Phong materials (diffuse, specular and ambient)</li>
+<li>Diffuse textures (png and jpeg only)</li>
+<li>Perspective camera</li>
+</ul>
+<h2>Workflow</h2>
+<p>Before exporting the scene make sure that all all visible objects are converted into polygon mesh (otherwise they will not be
+exported). Also make sure that the scene contains one directional light source. </p>
+<p>All materials used in the scene must be Phong materials. </p>
+<p>Only one texture is supported for each object. Make sure that each object only has a single texture projection.</p>
+<p>When the scene is ready for export, select the <b>WebGL export wizard</b> from the <b>WebGL export</b> menu.</p>
+<p>If needed you can change the subdivision level and construction mode from the geometry group. Most often the default values will be the best choice.</p>
+<p>Select the export path and press <b>Export</b></p>
+<h2>Running the example</h2>
+<p>To run the example a browser with WebGL support is needed. At the time writing the following browsers have WebGL support:</p>
+<ul>
+<li>Firefox 4.0 (or newer)</li>
+<li>Chrome 9.0 (or newer)</li>
+</ul>
+<p>The exported project requires that it running on a web-server. But to make it easy to test, a simple web-server is bundled with the export.</p>
+<p>To launch the local web-server, simple double-click the <b>SimpleWebServer.jar</b> (Java 6 needs to be installed)</p>
+<p><img src="simplewebserver.png"></p>
+<p>To start the webgl page, go to the web page <b>http://localhost:5000/index.html</b> or <b>http://127.0.0.1:5000/index.html</b> in your 
+browser with the SimpleWebserver running.</p>
+<p>To run on a webserver the, simply put all the exported files on a webserver and navigate to the <b>index.html</b> from a browser.</p>
+<h2>Source code</h2>
+<p>
+The full project is released as Open Source (<a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported (CC BY 3.0)</a>).</p>
+
+<p>The project is hosted here:<br>
+<a href="https://github.com/mortennobel/SoftimageWebGLExport">https://github.com/mortennobel/SoftimageWebGLExport</a>
+</p>
+<p>
+<img src="CreativeCommons.png" style="float:left;border:5px;">&nbsp;Morten Nobel-Joergensen / <br>&nbsp;Vaida Laganeckiene
+</p>
+
+<div id="keywords">
+<h2>Keywords</h2>
+<p>This WebGL exporter uses the following keywords:</p>
+<p>
+export, mesh, WebGL, OpenGL ES, browser, html, javascript
+</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="exportmesh_command.cpp" />
+    <ClCompile Include="helper.cpp" />
+    <ClCompile Include="importexport_menu.cpp" />
+    <ClCompile Include="importexport_prop.cpp" />
+    <ClCompile Include="WebGLExport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{2ca0ba99-c7e7-46f5-ae8d-fe0f02d49fcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="helper.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

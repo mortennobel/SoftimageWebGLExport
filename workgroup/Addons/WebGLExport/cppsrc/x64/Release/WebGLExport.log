@@ -1,0 +1,47 @@
+﻿Build started 10-06-2011 13:14:01.
+     1>Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Release\WebGLExporter.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       PreBuildEvent:
+         pack-resources.bat
+         :VCEnd
+         Bin2CPP Output > Resource1.h
+         Bin2CPP Output > Resource2.h
+         Bin2CPP Output > Resource3.h
+         Bin2CPP Output > Resource4.h
+         Bin2CPP Output > Resource5.h
+         Bin2CPP Output > Resource6.h
+         Bin2CPP Output > Resource7.h
+         Bin2CPP Output > Resource8.h
+         Bin2CPP Output > Resource9.h
+         Bin2CPP Output > Resource10.h
+         Bin2CPP Output > Resource11.h
+         Bin2CPP Output > Resource12.h
+         Bin2CPP Output > Resource13.h
+         Bin2CPP Output > Resource14.h
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Autodesk\Softimage 2011\XSISDK\include" /Zi /nologo /W1 /WX- /O2 /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt DependencyExporter.cpp
+         DependencyExporter.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\x64\Release\WebGLExporter.dll) does not match the Linker's OutputFile property value (C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\Application\Plugins\WebGLExporter.64.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(WebGLExporter) does not match the Linker's OutputFile property value (WebGLExporter.64). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"../Application/Plugins/WebGLExporter.64.dll" /NOLOGO "C:\Program Files\Autodesk\Softimage 2011\XSISDK\lib\nt-x86-64\sicoresdk.lib" "C:\Program Files\Autodesk\Softimage 2011\XSISDK\lib\nt-x86-64\sicppsdk.lib" "C:\Program Files\Autodesk\Softimage 2011\XSISDK\lib\nt-x86-64\ufolib.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\WebGLExporter.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\x64\Release\WebGLExporter.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"x64\Release\WebGLExporter.lib" /MACHINE:X64 /DLL x64\Release\DependencyExporter.obj
+         x64\Release\exportmesh_command.obj
+         x64\Release\helper.obj
+         x64\Release\WebGLExport.obj
+         x64\Release\WebGLExportCommand.obj
+         x64\Release\WebGLExport_menu.obj
+         x64\Release\WebGLExport_prop.obj
+         x64\Release\WebGLMeshExport.obj
+            Creating library x64\Release\WebGLExporter.lib and object x64\Release\WebGLExporter.exp
+         WebGLExport.vcxproj -> C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\x64\Release\WebGLExporter.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../Application/Plugins/WebGLExporter.64.dll;#2" /manifest x64\Release\WebGLExporter.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\WebGLExporter.unsuccessfulbuild".
+         Touching "x64\Release\WebGLExporter.lastbuildstate".
+     1>Done Building Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.84

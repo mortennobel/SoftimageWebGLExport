@@ -1,0 +1,14 @@
+bin2cpp\Bin2Cpp.exe webgl_resources\ajax-loader.gif Resource1
+bin2cpp\Bin2Cpp.exe webgl_resources\default-texture.jpg Resource2
+bin2cpp\Bin2Cpp.exe webgl_resources\glMatrix-0.9.6.js Resource3
+bin2cpp\Bin2Cpp.exe webgl_resources\phong.frag Resource4
+bin2cpp\Bin2Cpp.exe webgl_resources\phong.vert Resource5
+bin2cpp\Bin2Cpp.exe webgl_resources\SimpleWebServer.jar Resource6
+bin2cpp\Bin2Cpp.exe webgl_resources\unlit.frag Resource7
+bin2cpp\Bin2Cpp.exe webgl_resources\unlit.vert Resource8
+bin2cpp\Bin2Cpp.exe webgl_resources\webgl-input.js Resource9
+bin2cpp\Bin2Cpp.exe webgl_resources\webgl-loader.js Resource10
+bin2cpp\Bin2Cpp.exe webgl_resources\webgl-renderer.js Resource11
+bin2cpp\Bin2Cpp.exe webgl_resources\index.html Resource12
+bin2cpp\Bin2Cpp.exe webgl_resources\phong_color.frag Resource13
+bin2cpp\Bin2Cpp.exe webgl_resources\phong_color.vert Resource14
