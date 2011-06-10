@@ -9,6 +9,7 @@
 #include <xsi_scene.h>
 #include <xsi_project.h>
 #include <xsi_string.h>
+#include <xsi_progressbar.h>
 
 #include "helper.h"
 
@@ -32,8 +33,8 @@ private:
 		XSI::CFloatArray specularColor,
 		XSI::CFloatArray ambientColor,
 		float specularExponent);
-	void exportSceneObjects(JSONFileWriter &mfw, bool &first);
-	void exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first);
+	void exportSceneObjects(JSONFileWriter &mfw, bool &first,XSI::ProgressBar &bar);
+	void exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first,XSI::ProgressBar &bar);
 	bool exportCamera(JSONFileWriter &mfw, XSI::Camera cameraObj);
 	bool exportJSONObject(XSI::X3DObject &object);
 	void exportLight(JSONFileWriter &mfw, XSI::Light light);

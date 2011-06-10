@@ -1,7 +1,7 @@
-﻿Build started 10-06-2011 21:06:16.
+﻿Build started 10-06-2011 22:29:15.
      1>Project "C:\Users\Morten\Documents\My Dropbox\DTU - AnimationAndModelling\SoftimageProject\workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "x64\Release\WebGLExporter.unsuccessfulbuild".
+         Creating "x64\Release\WebGLExporter.unsuccessfulbuild" because "AlwaysCreate" was specified.
        PreBuildEvent:
          pack-resources.bat
          :VCEnd
@@ -44,4 +44,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.47
+Time Elapsed 00:00:02.66

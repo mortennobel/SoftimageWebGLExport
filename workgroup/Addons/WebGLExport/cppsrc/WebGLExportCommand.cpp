@@ -73,6 +73,16 @@ WebGLExportCommand::~WebGLExportCommand(void)
 bool WebGLExportCommand::runExport(){
 	if (!project.IsValid()) return false;
 	if (!scene.IsValid()) return false;
+
+	// set up a progress bar	
+	XSI::UIToolkit kit = app.GetUIToolkit();
+	XSI::ProgressBar bar = kit.GetProgressBar();
+	
+	bar.PutCancelEnabled( false );
+	bar.PutMaximum( 100 );
+	bar.PutVisible( true );
+	bar.PutCaption( "Exporting scene" );
+
 	XSI::CString strOut = GetWebGLExportOption( L"ExportDir" ).GetValue();
 	JSONFileWriter mfw;
 	XSI::CStatus st = mfw.Init(strOut,  L"scene.json");
@@ -93,9 +103,14 @@ bool WebGLExportCommand::runExport(){
 	mfw.WriteParamHead( L"textures" );
 	mfw.Write( L"[" );
 	mfw.EOL();
+	bar.PutCaption( "Exporting textures" );
+	bar.PutValue(10);
 	exportSceneTextures(mfw);
+	
 	mfw.Write( L"\t]" );
 	mfw.EOL(true);
+	bar.PutCaption( "Exporting materials" );
+	bar.PutValue(20);
 	mfw.WriteParamHead( L"materials");
 	mfw.Write( L"[" );
 	mfw.EOL();
@@ -104,11 +119,17 @@ bool WebGLExportCommand::runExport(){
 	mfw.Write( L"\t]" );
 	mfw.EOL(true);
 	bool first = true;
-	exportSceneObjects(mfw, first);
+	exportSceneObjects(mfw, first, bar);
 	mfw.Write( L"}" );
-	
+
+	bar.PutCaption( "Exporting dependencies" );
+	bar.PutValue(90);
 	DependencyExporter exp;
 	exp.exportAllFiles(strOut);
+	
+	bar.PutVisible( false );
+	long msgBoxResult;
+	kit.MsgBox(L"WebGL Export completed. Open the folder to see the result", 0 /*ok only*/,L"Export done",msgBoxResult);
 
 	return true;
 }
@@ -313,24 +334,27 @@ void WebGLExportCommand::exportSceneMaterial(JSONFileWriter &mfw,
 	mfw.EOL( );	
 }
 
-void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw, bool &first){
+void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw, bool &first, XSI::ProgressBar &bar){
 	mfw.WriteParamHead( L"sceneObjects");
 	mfw.Write( L"[" );
 	mfw.EOL();
 	XSI::Model root = scene.GetRoot();
 	XSI::CRefArray children = root.GetChildren();
+
 	for (int i=0;i<children.GetCount();i++){
+		float percentDone = 20+(i*(90.0-20.0))/children.GetCount(); // calculate the percent done (between 20 and 90 %)
+		bar.PutValue((long)percentDone);
 		XSI::CRef childCRef = children.GetItem(i);
 		if (childCRef.IsA(XSI::siX3DObjectID ) ) {
 			XSI::X3DObject xobj(childCRef);
-			exportSceneObjects(mfw, xobj, XSI::CString(""),first);
+			exportSceneObjects(mfw, xobj, XSI::CString(""),first,bar);
 		}
 	}
 	mfw.Write( L"\t]" );
 	mfw.EOL();
 }
 
-void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first){
+void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &obj, XSI::CString parent, bool &first, XSI::ProgressBar &bar){
 	XSI::CRefArray children = obj.GetChildren();
 	
 	bool hasParent = parent.Length()>0;
@@ -341,7 +365,8 @@ void WebGLExportCommand::exportSceneObjects(JSONFileWriter &mfw,XSI::X3DObject &
 		XSI::CRef childCRef = children.GetItem(i);
 		if (childCRef.IsA(XSI::siX3DObjectID ) ) {
 			XSI::X3DObject xobj(childCRef);
-			exportSceneObjects(mfw,xobj,uniqueName, first);
+			bar.PutCaption( XSI::CString("Exporting mesh ")+xobj.GetName() );
+			exportSceneObjects(mfw,xobj,uniqueName, first,bar);
 			first = false;
 		}
 	}
