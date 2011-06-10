@@ -1,0 +1,51 @@
+<html>
+<body>
+
+<h1>Softimage WebGL Exporter</h1>
+<p>====================================</p>
+
+<h2>Description</h2>
+<p>
+Let you export a Autodesk Softimage scene into a WebGL project.<br>
+The project is written as a SoftImage C++ plugin and the the export<br>
+will create a WebGL project (json, html, javascript and images).
+</p><p>
+The project contains a simple WebGL renderer written in javascript.
+</p>
+<h2>Installation (Softimage)</h2>
+<p>
+The current project requires Autodesk Softimage 2011 64-bit on Windows. <br>
+(If you are using a different version the code must be recompiled)
+</p><p>
+
+Install plugin
+<ul>
+<li>Open Softimage</li>
+<li>Go the the menu <b>File -> Plug-in Manager</b></li>
+<li>Choose the second tab '<b>Workgroups</b>'</li>
+<li>Click on the '<b>Connect...</b>'-button</li>
+<li>Add the workgroup folder (located in the same directory as this file)</li>
+<li>The plugin should now be installed and the menu item '<b>WebGL Export</b>' should appear.</li>
+</ul>
+</p>
+<h2>Usage</h2>
+
+<p>For documentation on how to use exporter, open the <b>WebGL Export -> WebGL Exporter wizard</b> and click on the questionmark next to WebGLExportProp.</p>
+
+<h2>Compilation</h2>
+<p>
+The environment variable XSISDK_ROOT needs to be set to 'C:\Program Files\Autodesk\Softimage 2011\XSISDK' (or where ever SoftImage XSISDK is installed).<br>
+Microsoft Visual Studio 2010 will be used for compiling the project.
+</p>
+<p>
+The MSVC project file is located here: <br>
+<b>workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj</b>
+</p>
+<h2>License</h2>
+<p>
+License: Creative Commons Attribution 3.0 Unported ( http://creativecommons.org/licenses/by/3.0/ )<br>
+Copyright: 2011 Morten Nobel-Joergensen / Vaida Laganeckiene<br>
+<a href="https://github.com/mortennobel/SoftimageWebGLExport">https://github.com/mortennobel/SoftimageWebGLExport</a>
+</p>
+</body>
+</html>
