@@ -21,16 +21,21 @@
 <li>Polygon mesh (max 64.000 vertex indices)</li>
 <li>Directional light (one)</li>
 <li>Phong materials (diffuse, specular and ambient)</li>
-<li>Diffuse textures (png and jpeg only)</li>
-<li>Perspective camera</li>
+<li>Diffuse textures (png and jpeg only. Texture dimensions must be a power of 2)</li>
+<li>No transperency is supported</li>
+<li>Multiple perspective cameras</li>
 </ul>
+<h2>Materials</h2>
+<p>One one material per mesh is supported. And only Phong materials are supported. Note that the 
+diffuse color works as a color multiplyer when using a diffuse texture - this gives a different result that in softimage (where 
+the diffuse color is ignored when using a diffuse texture). To fix this issue, you should use white as diffuse color.</p>
 <h2>Workflow</h2>
 <p>Before exporting the scene make sure that all all visible objects are converted into polygon mesh (otherwise they will not be
 exported). Also make sure that the scene contains one directional light source. </p>
 <p>All materials used in the scene must be Phong materials. </p>
 <p>Only one texture is supported for each object. Make sure that each object only has a single texture projection.</p>
 <p>When the scene is ready for export, select the <b>WebGL export wizard</b> from the <b>WebGL export</b> menu.</p>
-<p>If needed you can change the subdivision level and construction mode from the geometry group. Most often the default values will be the best choice.</p>
+<p>Select canvas size and background color.</p>
 <p>Select the export path and press <b>Export</b></p>
 <h2>Running the example</h2>
 <p>To run the example a browser with WebGL support is needed. At the time writing the following browsers have WebGL support:</p>

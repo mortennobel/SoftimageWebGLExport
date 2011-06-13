@@ -27,6 +27,8 @@ Install plugin
 
 ## Usage
 
+Checkout the help videos located in the folder 'help_videos'
+
 For documentation on how to use exporter, open the WebGL Exporter wizard and click on the questionmark next to WebGLExportProp.
 
 ## Compilation
