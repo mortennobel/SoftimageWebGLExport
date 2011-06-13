@@ -41,6 +41,14 @@ The MSVC project file is located here:
 
 workgroup\Addons\WebGLExport\cppsrc\WebGLExport.vcxproj
 
+## Known issues
+
+* WebGL renderer: Mouse movement in browser: Sometimes mouse key events are lost and movement continues
+* WebGL renderer: Mouse movement in browser: Vertical movement does not always work.
+* Softimage plugin: The exporter ignores everything it doesn't understand. Instead it should give error messages in some situations.
+* Softimage plugin: Should verify that the texture dimensions is valid.
+* Softimage plugin: More shaders should be better supported (Lambert and constant shader)
+
 ## License
 
 License: Creative Commons Attribution 3.0 Unported ( http://creativecommons.org/licenses/by/3.0/ )
