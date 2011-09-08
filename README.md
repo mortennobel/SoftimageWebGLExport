@@ -24,6 +24,7 @@ Install plugin
 * Click on the 'Connect...'-button
 * Add the workgroup folder (located in the same directory as this file)
 * The plugin should now be installed and the menu item 'WebGL Export' should appear.
+* You should also install Visual C++ Redistributable Package (Downloaded from either Microsofts or http://faux.uwcs.co.uk/vcredist/ )
 
 ## Usage
 
