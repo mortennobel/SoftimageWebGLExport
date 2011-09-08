@@ -18,6 +18,7 @@ The current project requires Autodesk Softimage 2011 64-bit on Windows.
 (If you are using a different version the code must be recompiled)
 
 Install plugin
+
 * Install Visual C++ Redistributable Package (Downloaded from either Microsofts or http://faux.uwcs.co.uk/vcredist/ )
 * Open Softimage
 * Go the the menu File -> Plug-in Manager
