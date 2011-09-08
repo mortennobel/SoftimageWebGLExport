@@ -18,13 +18,14 @@ The current project requires Autodesk Softimage 2011 64-bit on Windows.
 (If you are using a different version the code must be recompiled)
 
 Install plugin
+* Install Visual C++ Redistributable Package (Downloaded from either Microsofts or http://faux.uwcs.co.uk/vcredist/ )
 * Open Softimage
 * Go the the menu File -> Plug-in Manager
 * Choose the second tab 'Workgroups'
 * Click on the 'Connect...'-button
 * Add the workgroup folder (located in the same directory as this file)
 * The plugin should now be installed and the menu item 'WebGL Export' should appear.
-* You should also install Visual C++ Redistributable Package (Downloaded from either Microsofts or http://faux.uwcs.co.uk/vcredist/ )
+
 
 ## Usage
 
